@@ -1,5 +1,7 @@
 import csv
 
+# Beware of blank lines in between the rows - throws an error
+
 csv_file = open('test.csv', 'w')
 
 writer = csv.writer(csv_file, delimiter =';')

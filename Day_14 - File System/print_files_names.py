@@ -1,6 +1,6 @@
 import glob, os
 
-os.chdir("test_dir")
+os.chdir(r".\Day_14 - File System\test_dir") # Note quick and dirty way to get the right directory. "r"
 
 
 print ("TXT files")
