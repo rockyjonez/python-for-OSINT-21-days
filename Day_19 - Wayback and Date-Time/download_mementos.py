@@ -3,11 +3,12 @@ from datetime import datetime
 
 client = wayback.WaybackClient()
 
-for record in client.search('http://nasa.gov', to_date=datetime(1999, 1, 1)):
+for record in client.search('https://nasa.gov', to_date=datetime(1999, 1, 1)):
 
     memento = client.get_memento(record)
 
-    fileName=memento.memento_url.replace("/","-")+".html"
+    # Replace slashes and colons with underscores in the filename
+    fileName = memento.memento_url.replace("/", "_").replace(":", "_") + ".html"
 
     memento_file = open(fileName, "a")
 

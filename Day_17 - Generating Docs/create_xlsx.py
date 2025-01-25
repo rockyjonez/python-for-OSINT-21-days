@@ -1,6 +1,5 @@
 import xlsxwriter
 
-
 workbook = xlsxwriter.Workbook('employees.xlsx')
 worksheet = workbook.add_worksheet()
 
